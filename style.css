@@ -4,14 +4,8 @@ body{
 }
 
 .footer{
-  margin:auto;
-  padding:5px;
-  width:fit-content;
-  position:relative;
-  bottom:-625px;
-}
-.footer p{
-  margin:0;
+  position:absolute;
+  bottom:10px;left:25%;
 }
 
 .wipAlert{
@@ -27,4 +21,29 @@ body{
 }
 .wipAlert span{
   font-size: xx-large;
+}
+
+.linkTree{
+  outline:solid blue 2px;
+  width:400px;
+  display:flex;
+  flex-wrap: wrap;
+}
+.treeItem{
+  background-color:#c0c0c0;
+  margin:10px;
+  border:solid #404040 6px;
+  border-radius: 5%;
+}
+.treeItem p{
+  color:#000000;
+  text-align: center;
+  margin:4px;
+}
+.treeItem img{
+  height:96px;
+  width:96px;
+}
+.treeItem a{
+  text-decoration: none;
 }
