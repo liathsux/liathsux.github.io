@@ -1,0 +1,26 @@
+header{
+  margin:auto;
+  width: fit-content;
+  display:flex;
+  outline:solid #404040 6px;
+  border-radius: 5px;
+  background-color:#c0c0c0;
+}
+.headerText h1{
+  margin:auto;
+}
+.headerText h3{
+  margin: auto;
+}
+.headerText{
+  margin:auto 10px;
+}
+header img{
+  border:solid #000 2px;
+  border-radius: 3px;
+  margin:20px 10px;
+  height:80px;
+}
+.headerText p{
+  font-size: xx-small;
+}

@@ -1,0 +1,24 @@
+.roadmap{
+  padding:5px;
+  margin:auto;
+  width:fit-content;
+}
+.roadmap h3{
+  display:flex;
+  margin:15px auto;
+  width:fit-content;
+}
+.roadmap li{
+  margin:5px;
+  padding:5px;
+  border-left:solid 4px #3570c9;
+  background-color:#70a9ff;
+}
+.roadmap li:hover{
+  border-left:solid 8px #3570c9;
+}
+.roadmap ul{
+  width:400px;
+  list-style-type: none;
+  padding:0;
+}
