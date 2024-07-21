@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Tumblr",
+    "icon": "./src/tumblrIcon.png",
+    "link": "https://www.tumblr.com/blog/liathuwu",
+    "alt": "tumblr Icon"
+  },
+  {
+    "name": "Mastodon",
+    "icon": "./src/mastodonIcon.png",
+    "link": "https://mastodon.social/@liathsux",
+    "alt": "mastodon icon"
+  },
+  {
+    "name": "YouTube",
+    "icon": "./src/youtubeIcon.png",
+    "link": "https://www.youtube.com/@liathuwu",
+    "alt": "youtube icon"
+  },
+  {
+    "name": "Reddit",
+    "icon": "./src/redditIcon.png",
+    "link": "https://www.reddit.com/user/liathuwu",
+    "alt": "reddit icon"
+  },
+  {
+    "name": "Github",
+    "icon": "./src/githubIcon.png",
+    "link": "https://github.com/liathsux",
+    "alt": "github icon"
+  }
+]

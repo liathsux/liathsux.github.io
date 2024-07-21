@@ -1,159 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LiathSUX whatever</title>
+  <title>LiathSUX</title>
 </head>
+
 <body>
   <style>
-    body{
-      background-color:#808080;
+    body {
+      background-color: #808080;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      position:flex;
+      position: flex;
       flex-direction: column;
     }
   </style>
-  <header>
+  <div class="header">
     <style>
-      header{
-        margin:auto;
+      .header {
+        margin: auto;
         width: fit-content;
-        display:flex;
-        outline:solid #404040 6px;
+        display: flex;
+        outline: solid #404040 6px;
         border-radius: 5px;
-        background-color:#c0c0c0;
+        background-color: #c0c0c0;
       }
-      .headerText h1{
-        margin:auto;
-      }
-      .headerText h3{
+
+      .headerText h1 {
         margin: auto;
       }
-      .headerText{
-        margin:auto 10px;
+
+      .headerText h3 {
+        margin: auto;
       }
-      header img{
-        border:solid #000 2px;
+
+      .headerText {
+        margin: auto 10px;
+      }
+
+      .header img {
+        border: solid #000 2px;
         border-radius: 3px;
-        margin:20px 10px;
-        height:80px;
+        margin: 20px 10px;
+        height: 80px;
       }
-      .headerText p{
+
+      .headerText p {
         font-size: xx-small;
       }
     </style>
-    <img src="./src/kyePfp.jpg" alt="">
+    <img src="./src/kyePfp.png" alt="">
     <div class="headerText">
       <h1>Liaths Page</h1>
       <p>very empty, I know</p>
       <h3>I'll make it look like I know what I'm doing</h3>
     </div>
-  </header>
+  </div>
+
   <div class="roadmap">
-      <style>
-        .roadmap{
-          padding:5px;
-          margin:auto;
-          width:fit-content;
+    <style>
+      .roadmap {
+        padding: 5px;
+        margin: auto;
+        width: fit-content;
+      }
+
+      .roadmap h3 {
+        display: flex;
+        margin: 15px auto;
+        width: fit-content;
+      }
+
+      .roadmap li {
+        margin: 5px;
+        padding: 5px;
+        border-left: solid 4px #3570c9;
+        background-color: #70a9ff;
+      }
+
+      .roadmap li:hover {
+        border-left: solid 8px #3570c9;
+      }
+
+      .roadmap ul {
+        width: 400px;
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .roadmap li a {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+    <h3><u>What this might become:</u></h3>
+    <ul>
+      <li><a href="#linkTree">Links to all my social accounts </a><span style="color:#00ff00">(DONE)</span></li>
+      <li>Hardware & Software info</li>
+      <li>Blogs even? (idk if I can be bothered tho)</li>
+      <li>About Me & About this Page</li>
+      <li>Changelog</li>
+    </ul>
+  </div>
+
+  <div id="linkTree">
+    <script type="text/javascript">
+      fetch("./linkTree.json")
+        .then(function(response){
+          return response.json()
+        })
+        .then(function(data){
+          appendData(data);
+        })
+      function appendData(data){
+        let mainContainer = document.getElementById("linkTree");
+        for(let i = 0; i<data.length;i++){
+          let div = document.createElement("a");
+          ##TODO: INSERT BELOW INTO DIV CALLED treeItem!!!!!!!
+          div.innerHTML = `<img src="${data[i].icon}" alt="${data[i].alt}">`;
+          mainContainer.appendChild(div);
         }
-        .roadmap h3{
-          display:flex;
-          margin:15px auto;
-          width:fit-content;
-        }
-        .roadmap li{
-          margin:5px;
-          padding:5px;
-          border-left:solid 4px #3570c9;
-          background-color:#70a9ff;
-        }
-        .roadmap li:hover{
-          border-left:solid 8px #3570c9;
-        }
-        .roadmap ul{
-          width:400px;
-          list-style-type: none;
-          padding:0;
-        }
-        .roadmap li a{
-          text-decoration:none;
-          color:inherit;
-        }
-      </style>
-      <h3><u>What this might become:</u></h3>
-      <ul>
-        <li><a href="#linkTree">Links to all my social accounts </a><span style="color:#00ff00">(DONE)</span></li>
-        <li>Hardware & Software info</li>
-        <li>Blogs even? (idk if I can be bothered tho)</li>
-        <li>About Me & About this Page</li>
-        <li>Changelog</li>
-      </ul>
-    </div>
-    <div id="linkTree">
-      <style>
-        #linkTree{        
-          border:solid #404040 6px;
-          border-radius: 5px;
-          background-color:#c0c0c0;
-          width:400px;
-          margin:60px auto;
-          display:flex;
-          flex-wrap: wrap;
-        }
-        #linkTree p{
-          color:#000000;
-          margin:auto;
-          width:fit-content;
-        }
-        .treeItem{
-          width:fit-content;
-          background-color:#a0a0a0;
-          margin:10px auto;
-          border:solid #303030 6px;
-          border-radius: 5%;
-        }
-        .treeItem img{
-          height:96px;
-          width:96px;
-        }
-        .treeItem a{
-          text-decoration: none;
-        }
-      </style>
-      <p>Here you can find links to most of my socials:</p>
-      <div class="treeItem">
-        <a href="https://www.tumblr.com/blog/liathuwu">
-          <img src="./src/tumblrIcon.png" alt="tumblr icon">
-          <p>Tumblr</p>
-        </a>
-      </div>
-      <div class="treeItem">
-        <a href="https://mastodon.social/@liathsux">
-          <img src="./src/mastodonIcon.png" alt="mastodon icon">
-          <p>Mastodon</p>
-        </a>
-      </div>
-      <div class="treeItem">
-        <a href="https://www.youtube.com/@liathuwu">
-          <img src="./src/youtubeIcon.png" alt="youtube icon">
-          <p>YouTube</p>
-        </a>
-      </div>
-      <div class="treeItem">
-        <a href="https://www.reddit.com/user/liathuwu/">
-          <img src="./src/redditIcon.png" alt="reddit icon">
-          <p>Reddit</p>
-        </a>
-      </div>
-      <div class="treeItem">
-        <a href="https://github.com/liathsux">
-          <img src="./src/githubIcon.png" alt="github icon">
-          <p>Github</p>
-        </a>
-      </div>
-    </div>
-<!--
+      }
+    </script>
+    <style>
+      #linkTree {
+        border: solid #404040 6px;
+        border-radius: 5px;
+        background-color: #c0c0c0;
+        width: 400px;
+        margin: 60px auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #linkTree p {
+        color: #000000;
+        margin: auto;
+        width: fit-content;
+      }
+
+      .treeItem {
+        width: fit-content;
+        background-color: #a0a0a0;
+        margin: 10px auto;
+        border: solid #303030 6px;
+        border-radius: 5%;
+      }
+
+      .treeItem img {
+        height: 96px;
+        width: 96px;
+      }
+
+      .treeItem a {
+        text-decoration: none;
+      }
+    </style>
+    <p>Here you can find links to most of my socials:</p>
+  </div>
+
+  <!--
     <div class="wipAlert">
       <style>
         .wipAlert{
@@ -176,18 +183,21 @@
       <p>just in case you somehow didn't notice</p>
     </div>
 -->
-      <div class="footer">
-        <style>
-          .footer{
-            text-align: center;
-            position:fixed;
-            bottom:0;
-            width:fit-content;
-            margin-left:25%;
-            margin-right:25%;
-          }
-        </style>
-        <p>This isn't supposed to be good, I'm only doing this for fun. If having fun means that any aspect of this gives you pain, sorry not sorry</p>
-      </div>
+
+  <div class="footer">
+    <style>
+      .footer {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: fit-content;
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+    </style>
+    <p>This isn't supposed to be good, I'm only doing this for fun. If having fun means that any aspect of this gives
+      you pain, sorry not sorry</p>
+  </div>
 </body>
+
 </html>
