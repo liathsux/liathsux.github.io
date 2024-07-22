@@ -107,18 +107,22 @@
   <div id="linkTree">
     <script type="text/javascript">
       fetch("./linkTree.json")
-        .then(function(response){
-          return response.json()
+        .then((res) => {
+          return res.json()
         })
-        .then(function(data){
+        .then((data) => {
           appendData(data);
         })
-      function appendData(data){
+      function appendData(data) {
         let mainContainer = document.getElementById("linkTree");
-        for(let i = 0; i<data.length;i++){
-          let div = document.createElement("a");
-          ##TODO: INSERT BELOW INTO DIV CALLED treeItem!!!!!!!
-          div.innerHTML = `<img src="${data[i].icon}" alt="${data[i].alt}">`;
+        for (let i = 0; i < data.length; i++) {
+          let div = document.createElement("div");
+          div.classList.add("treeItem")
+          div.innerHTML = `
+            <a href="${data[i].link}">
+              <img src="${data[i].icon}" alt="${data[i].alt}">
+              <p>${data[i].name}</p>
+            </a>`;
           mainContainer.appendChild(div);
         }
       }
@@ -161,29 +165,6 @@
   </div>
 
   <!--
-    <div class="wipAlert">
-      <style>
-        .wipAlert{
-          width:fit-content;
-          margin:auto;
-          border:solid #ff0000 5px;
-          background-color: #ff0000;
-          color:#ffffff;
-        }
-        .wipAlert p{
-          width:fit-content;
-          margin:auto;
-        }
-        .wipAlert span{
-          font-size: xx-large;
-        }
-      </style>
-      <p>this page is still</p>
-      <p><span>WORK IN PROGRESS</span></p>
-      <p>just in case you somehow didn't notice</p>
-    </div>
--->
-
   <div class="footer">
     <style>
       .footer {
@@ -198,6 +179,7 @@
     <p>This isn't supposed to be good, I'm only doing this for fun. If having fun means that any aspect of this gives
       you pain, sorry not sorry</p>
   </div>
+  -->
 </body>
 
 </html>
