@@ -1,0 +1,150 @@
+
+.roadmap {
+    padding: 5px;
+    margin: auto;
+    width: fit-content;
+  }
+
+  .roadmap h3 {
+    display: flex;
+    margin: 15px auto;
+    width: fit-content;
+  }
+
+  .roadmap li {
+    margin: 5px;
+    padding: 5px;
+    border-left: solid 4px #3570c9;
+    background-color: #70a9ff;
+  }
+
+  .roadmap li:hover {
+    border-left: solid 8px #3570c9;
+  }
+
+  .roadmap ul {
+    width: 400px;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .roadmap li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .header {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    outline: solid #404040 6px;
+    border-radius: 5px;
+    background-color: #c0c0c0;
+  }
+
+  .headerText h1 {
+    margin: auto;
+  }
+
+  .headerText h3 {
+    margin: auto;
+  }
+
+  .headerText {
+    margin: auto 10px;
+  }
+
+  .header img {
+    border: solid #000 2px;
+    border-radius: 3px;
+    margin: 20px 10px;
+    height: 80px;
+  }
+
+  .headerText p {
+    font-size: xx-small;
+  }
+
+  body {
+    background-color: #808080;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: flex;
+    flex-direction: column;
+  }
+
+
+  .hwinfo {
+    padding: 10px;
+    margin: 20px auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    outline: solid #404040 6px;
+    border-radius: 5px;
+    background-color: #c0c0c0;
+  }
+
+  .hwinfo h1 {
+    width: fit-content;
+    margin: auto;
+  }
+
+  .hwinfoText {
+    margin: auto;
+  }
+
+  .hwinfoText ul {
+    padding-left: 20px;
+  }
+
+  .swinfo {
+    padding: 10px;
+    margin: 20px auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    outline: solid #404040 6px;
+    border-radius: 5px;
+    background-color: #c0c0c0;
+  }
+
+  .swinfo h1 {
+    width: fit-content;
+    margin: auto;
+  }
+
+  .swinfoText {
+    margin: auto;
+  }
+
+  #linkTree {
+    border: solid #404040 6px;
+    border-radius: 5px;
+    background-color: #c0c0c0;
+    width: 400px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #linkTree p {
+    color: #000000;
+    margin: auto;
+    width: fit-content;
+  }
+
+  .treeItem {
+    width: fit-content;
+    background-color: #a0a0a0;
+    margin: 10px auto;
+    border: solid #303030 6px;
+    border-radius: 5%;
+  }
+
+  .treeItem img {
+    height: 96px;
+    width: 96px;
+  }
+
+  .treeItem a {
+    text-decoration: none;
+  }
