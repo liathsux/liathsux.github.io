@@ -18,54 +18,6 @@ body {
 
 
 
-/*////////// ROADMAP \\\\\\\\\\*/
-.roadmap {
-  padding: 5px;
-  margin: auto;
-  width: fit-content;
-}
-
-.roadmap h3 {
-  display: flex;
-  margin: 15px auto;
-  width: fit-content;
-}
-
-.roadmap li {
-  margin: 5px;
-  padding: 5px;
-  border-left: solid 4px #3570c9;
-  background-color: #70a9ff;
-}
-
-.roadmap li:hover {
-  background: rgb(53, 112, 201);
-  background: linear-gradient(90deg, rgba(53, 112, 201, 1) 0%, rgba(112, 169, 255, 1) 14%, rgba(112, 169, 255, 1) 100%);
-}
-
-.roadmap ul {
-  width: 400px;
-  list-style-type: none;
-  padding: 0;
-}
-
-.roadmap li a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.done {
-  color: #ffffff;
-  margin: 20px;
-  padding: 0px 5px;
-  border: solid 2px #00ff00;
-  background-color: #23d10080;
-}
-
-/*\\\\\\\\\\ ROADMAP //////////*/
-
-
-
 /*////////// HEADER \\\\\\\\\\*/
 .header {
   display: flex;
@@ -98,8 +50,55 @@ body {
 
 
 
+/*////////// ROADMAP \\\\\\\\\\*/
+.roadmap {
+  padding: 5px;
+  margin: auto;
+  width: fit-content;
+}
+
+.roadmap h3 {
+  display: flex;
+  margin: 15px auto;
+  width: fit-content;
+}
+
+.roadmap li {
+  margin: 5px;
+  padding: 5px;
+  border-left: solid 4px #3570c9;
+  background-color: #70a9ff;
+}
+
+.roadmap li:hover {
+  background: rgb(53, 112, 201);
+  background: linear-gradient(90deg, rgba(53, 112, 201, 1) 0%, rgba(112, 169, 255, 1) 14%, rgba(112, 169, 255, 1) 100%);
+}
+
+.roadmap ul {
+  width: 400px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.roadmap li a {
+  color: inherit;
+}
+
+.done {
+  color: #ffffff;
+  margin: 20px;
+  padding: 0px 5px;
+  border: solid 2px #00ff00;
+  background-color: #23d10080;
+}
+
+/*\\\\\\\\\\ ROADMAP //////////*/
+
+
+
 /*////////// HARDWARE INFO \\\\\\\\\\*/
-.hwinfo {
+#hwinfo {
   padding: 10px;
   margin: 20px auto;
   width: 400px;
@@ -107,7 +106,7 @@ body {
   flex-direction: column;
 }
 
-.hwinfo h1 {
+#hwinfo h1 {
   width: fit-content;
   margin: auto;
 }
