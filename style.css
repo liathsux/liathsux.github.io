@@ -1,0 +1,150 @@
+/*////////// BODY \\\\\\\\\\*/
+body {
+  background-color: #808080;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: flex;
+  flex-direction: column;
+}
+
+.container {
+  outline: solid #404040 6px;
+  border-radius: 5px;
+  background-color: #c0c0c0;
+  margin: auto;
+  width: fit-content;
+}
+
+/*\\\\\\\\\\ BODY //////////*/
+
+
+
+/*////////// ROADMAP \\\\\\\\\\*/
+.roadmap {
+  padding: 5px;
+  margin: auto;
+  width: fit-content;
+}
+
+.roadmap h3 {
+  display: flex;
+  margin: 15px auto;
+  width: fit-content;
+}
+
+.roadmap li {
+  margin: 5px;
+  padding: 5px;
+  border-left: solid 4px #3570c9;
+  background-color: #70a9ff;
+}
+
+.roadmap li:hover {
+  background: rgb(53, 112, 201);
+  background: linear-gradient(90deg, rgba(53, 112, 201, 1) 0%, rgba(112, 169, 255, 1) 14%, rgba(112, 169, 255, 1) 100%);
+}
+
+.roadmap ul {
+  width: 400px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.roadmap li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*\\\\\\\\\\ ROADMAP //////////*/
+
+
+
+/*////////// HEADER \\\\\\\\\\*/
+.header {
+  display: flex;
+}
+
+.headerText h1 {
+  margin: auto;
+}
+
+.headerText h3 {
+  margin: auto;
+}
+
+.header img {
+  border: solid #000 2px;
+  border-radius: 3px;
+  margin: 20px 10px;
+  height: 80px;
+}
+
+.headerText {
+  margin: auto 10px;
+}
+
+.headerText p {
+  font-size: xx-small;
+}
+
+/*\\\\\\\\\\ HEADER //////////*/
+
+
+
+/*////////// HARDWARE INFO \\\\\\\\\\*/
+.hwinfo {
+  padding: 10px;
+  margin: 20px auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hwinfo h1 {
+  width: fit-content;
+  margin: auto;
+}
+
+.hwinfoText {
+  margin: auto;
+}
+
+.hwinfoText ul {
+  padding-left: 20px;
+}
+
+/*\\\\\\\\\\ HARDWARE INFO //////////*/
+
+
+
+/*////////// LINKTREE \\\\\\\\\\*/
+#linkTree {
+  width: 400px;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#linkTree p {
+  color: #000000;
+  margin: auto;
+  width: fit-content;
+}
+
+.treeItem {
+  width: fit-content;
+  background-color: #a0a0a0;
+  margin: 10px auto;
+  border: solid #303030 6px;
+  border-radius: 5%;
+}
+
+.treeItem img {
+  height: 96px;
+  width: 96px;
+}
+
+.treeItem a {
+  text-decoration: none;
+}
+
+/*\\\\\\\\\\ TREE ITEM //////////*/

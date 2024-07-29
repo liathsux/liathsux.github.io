@@ -4,104 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>LiathSUX</title>
 </head>
 
 <body>
-  <style>
-    body {
-      background-color: #808080;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      position: flex;
-      flex-direction: column;
-    }
-  </style>
-  <div class="header">
-    <style>
-      .header {
-        margin: auto;
-        width: fit-content;
-        display: flex;
-        outline: solid #404040 6px;
-        border-radius: 5px;
-        background-color: #c0c0c0;
-      }
-
-      .headerText h1 {
-        margin: auto;
-      }
-
-      .headerText h3 {
-        margin: auto;
-      }
-
-      .headerText {
-        margin: auto 10px;
-      }
-
-      .header img {
-        border: solid #000 2px;
-        border-radius: 3px;
-        margin: 20px 10px;
-        height: 80px;
-      }
-
-      .headerText p {
-        font-size: xx-small;
-      }
-    </style>
-    <img src="./src/kyePfp.png" alt="">
-    <div class="headerText">
-      <h1>Liaths Page</h1>
-      <p>very empty, I know</p>
-      <h3>I'll make it look like I know what I'm doing</h3>
+  <div class="container">
+    <div class="header">
+      <img src="./src/kyePfp.png" alt="">
+      <div class="headerText">
+        <h1>Liaths Page</h1>
+        <p>very empty, I know</p>
+        <h3>I'll make it look like I know what I'm doing</h3>
+      </div>
     </div>
   </div>
 
   <div class="roadmap">
-    <style>
-      .roadmap {
-        padding: 5px;
-        margin: auto;
-        width: fit-content;
-      }
-
-      .roadmap h3 {
-        display: flex;
-        margin: 15px auto;
-        width: fit-content;
-      }
-
-      .roadmap li {
-        margin: 5px;
-        padding: 5px;
-        border-left: solid 4px #3570c9;
-        background-color: #70a9ff;
-      }
-
-      .roadmap li:hover {
-        background: rgb(53, 112, 201);
-        background: linear-gradient(90deg, rgba(53, 112, 201, 1) 0%, rgba(112, 169, 255, 1) 14%, rgba(112, 169, 255, 1) 100%);
-      }
-
-      .roadmap ul {
-        width: 400px;
-        list-style-type: none;
-        padding: 0;
-      }
-
-      .roadmap li a {
-        color: inherit;
-      }
-
-      .done {
-        color: #ffffff;
-        margin: 20px;
-        padding: 0px 5px;
-        border: solid 2px #00ff00;
-        background-color: #23d10080;
-      }
-    </style>
     <h3><u>What this might become:</u></h3>
     <ul>
       <li><a href="#linkTree">Links to all my social accounts </a><span class="done">DONE</span></li>
@@ -112,82 +31,50 @@
     </ul>
   </div>
 
-  <div id="linkTree">
-    <script type="text/javascript">
-      fetch("./linkTree.json")
-        .then((res) => {
-          return res.json()
-        })
-        .then((data) => {
-          appendData(data);
-        })
-      function appendData(data) {
-        let mainContainer = document.getElementById("linkTree");
-        for (let i = 0; i < data.length; i++) {
-          let div = document.createElement("div");
-          div.classList.add("treeItem")
-          div.innerHTML = `
-            <a href="${data[i].link}">
-              <img src="${data[i].icon}" alt="${data[i].alt}">
-              <p>${data[i].name}</p>
-            </a>`;
-          mainContainer.appendChild(div);
+  <div class="container">
+    <div id="linkTree">
+      <script type="text/javascript">
+        fetch("./linkTree.json")
+          .then((res) => {
+            return res.json()
+          })
+          .then((data) => {
+            appendData(data);
+          })
+        function appendData(data) {
+          let mainContainer = document.getElementById("linkTree");
+          for (let i = 0; i < data.length; i++) {
+            let div = document.createElement("div");
+            div.classList.add("treeItem")
+            div.innerHTML = `
+              <a href="${data[i].link}">
+                <img src="${data[i].icon}" alt="${data[i].alt}">
+                <p>${data[i].name}</p>
+              </a>`;
+            mainContainer.appendChild(div);
+          }
         }
-      }
-    </script>
-    <style>
-      #linkTree {
-        border: solid #404040 6px;
-        border-radius: 5px;
-        background-color: #c0c0c0;
-        width: 400px;
-        margin: 60px auto;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      #linkTree p {
-        color: #000000;
-        margin: auto;
-        width: fit-content;
-      }
-
-      .treeItem {
-        width: fit-content;
-        background-color: #a0a0a0;
-        margin: 10px auto;
-        border: solid #303030 6px;
-        border-radius: 5%;
-      }
-
-      .treeItem img {
-        height: 96px;
-        width: 96px;
-      }
-
-      .treeItem a {
-        text-decoration: none;
-      }
-    </style>
-    <p>Here you can find links to most of my socials:</p>
+      </script>
+      <p>Here you can find links to most of my socials:</p>
+    </div>
   </div>
 
-  <!--
-  <div class="footer">
-    <style>
-      .footer {
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        width: fit-content;
-        margin-left: 25%;
-        margin-right: 25%;
-      }
-    </style>
-    <p>This isn't supposed to be good, I'm only doing this for fun. If having fun means that any aspect of this gives
-      you pain, sorry not sorry</p>
+  <div class="container">
+    <div class="hwinfo">
+      <h1>Hardware Info:</h1>
+      <div class="hwinfoText">
+        <p>CPU: AMD Ryzen 5 5600X</p>
+        <p>NVIDIA GeForce RTX 4070</p>
+        <p>RAM: 32GB</p>
+        <p>Disk(s):</p>
+        <ul>
+          <li>NVMe m.2: 1TB</li>
+          <li>SATA SSD: 1TB</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
-  -->
 </body>
 
 </html>
