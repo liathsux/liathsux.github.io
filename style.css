@@ -39,7 +39,8 @@ body {
 }
 
 .roadmap li:hover {
-  border-left: solid 8px #3570c9;
+  background: rgb(53, 112, 201);
+  background: linear-gradient(90deg, rgba(53, 112, 201, 1) 0%, rgba(112, 169, 255, 1) 14%, rgba(112, 169, 255, 1) 100%);
 }
 
 .roadmap ul {
