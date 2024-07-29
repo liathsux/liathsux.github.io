@@ -9,12 +9,14 @@
 </head>
 
 <body>
-  <div class="header">
-    <img src="./src/kyePfp.png" alt="">
-    <div class="headerText">
-      <h1>Liaths Page</h1>
-      <p>very empty, I know</p>
-      <h3>I'll make it look like I know what I'm doing</h3>
+  <div class="container">
+    <div class="header">
+      <img src="./src/kyePfp.png" alt="">
+      <div class="headerText">
+        <h1>Liaths Page</h1>
+        <p>very empty, I know</p>
+        <h3>I'll make it look like I know what I'm doing</h3>
+      </div>
     </div>
   </div>
 
@@ -29,33 +31,35 @@
     </ul>
   </div>
 
-  <div id="linkTree">
-    <script type="text/javascript">
-      fetch("./linkTree.json")
-        .then((res) => {
-          return res.json()
-        })
-        .then((data) => {
-          appendData(data);
-        })
-      function appendData(data) {
-        let mainContainer = document.getElementById("linkTree");
-        for (let i = 0; i < data.length; i++) {
-          let div = document.createElement("div");
-          div.classList.add("treeItem")
-          div.innerHTML = `
-            <a href="${data[i].link}">
-              <img src="${data[i].icon}" alt="${data[i].alt}">
-              <p>${data[i].name}</p>
-            </a>`;
-          mainContainer.appendChild(div);
+  <div class="container">
+    <div id="linkTree">
+      <script type="text/javascript">
+        fetch("./linkTree.json")
+          .then((res) => {
+            return res.json()
+          })
+          .then((data) => {
+            appendData(data);
+          })
+        function appendData(data) {
+          let mainContainer = document.getElementById("linkTree");
+          for (let i = 0; i < data.length; i++) {
+            let div = document.createElement("div");
+            div.classList.add("treeItem")
+            div.innerHTML = `
+              <a href="${data[i].link}">
+                <img src="${data[i].icon}" alt="${data[i].alt}">
+                <p>${data[i].name}</p>
+              </a>`;
+            mainContainer.appendChild(div);
+          }
         }
-      }
-    </script>
-    <p>Here you can find links to most of my socials:</p>
+      </script>
+      <p>Here you can find links to most of my socials:</p>
+    </div>
   </div>
 
-  <div class="info">
+  <div class="container">
     <div class="hwinfo">
       <h1>Hardware Info:</h1>
       <div class="hwinfoText">
@@ -69,33 +73,8 @@
         </ul>
       </div>
     </div>
-  
-    <div class="swinfo">
-      <h1>Software Info:</h1>
-      <div class="swinfoText">
-        <p>Lorem Ipsum</p>
-        <p>Dolor sit Amet</p>
-        <p>Conseteur</p>
-      </div>
-    </div>
-    
+
   </div>
-  <!--
-  <div class="footer">
-    <style>
-      .footer {
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        width: fit-content;
-        margin-left: 25%;
-        margin-right: 25%;
-      }
-    </style>
-    <p>This isn't supposed to be good, I'm only doing this for fun. If having fun means that any aspect of this gives
-      you pain, sorry not sorry</p>
-  </div>
-  -->
 </body>
 
 </html>
